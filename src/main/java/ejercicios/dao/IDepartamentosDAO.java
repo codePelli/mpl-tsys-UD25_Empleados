@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 import ejercicios.dto.Departamentos;
 =======
 import ejercicios.Departamentos;
->>>>>>> refs/remotes/origin/master
 
 @Repository
 public interface IDepartamentosDAO extends JpaRepository<Departamentos, Integer>{

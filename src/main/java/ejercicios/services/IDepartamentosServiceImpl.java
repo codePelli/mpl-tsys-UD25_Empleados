@@ -12,7 +12,6 @@ import ejercicios.dto.Departamentos;
 import ejercicios.Departamentos;
 import ejercicios.dao.IDepartamentosDAO;
 import ejercicios.dto.DepartamentosDTO;
->>>>>>> refs/remotes/origin/master
 
 public class IDepartamentosServiceImpl implements IDepartamentosService{
 

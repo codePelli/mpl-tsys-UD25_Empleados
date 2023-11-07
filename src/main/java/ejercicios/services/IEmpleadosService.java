@@ -6,7 +6,6 @@ import java.util.List;
 import ejercicios.dto.Empleados;
 =======
 import ejercicios.Empleados;
->>>>>>> refs/remotes/origin/master
 
 public interface IEmpleadosService {
 

@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import ejercicios.dto.Empleados;
 =======
 import ejercicios.Empleados;
->>>>>>> refs/remotes/origin/master
 
 public class IEmpleadosServiceImpl implements IEmpleadosService{
 
