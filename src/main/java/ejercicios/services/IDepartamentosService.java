@@ -2,7 +2,12 @@ package ejercicios.services;
 
 import java.util.List;
 
+<<<<<<< HEAD
 import ejercicios.dto.Departamentos;
+=======
+import ejercicios.Departamentos;
+import ejercicios.dto.DepartamentosDTO;
+>>>>>>> refs/remotes/origin/master
 
 public interface IDepartamentosService {
 	

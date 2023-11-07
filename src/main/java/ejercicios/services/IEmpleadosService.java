@@ -2,7 +2,11 @@ package ejercicios.services;
 
 import java.util.List;
 
+<<<<<<< HEAD
 import ejercicios.dto.Empleados;
+=======
+import ejercicios.Empleados;
+>>>>>>> refs/remotes/origin/master
 
 public interface IEmpleadosService {
 
