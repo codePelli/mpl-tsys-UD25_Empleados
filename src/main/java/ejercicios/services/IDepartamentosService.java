@@ -2,17 +2,17 @@ package ejercicios.services;
 
 import java.util.List;
 
-import ejercicios.dto.DepartamentosDTO;
+import ejercicios.dto.Departamentos;
 
 public interface IDepartamentosService {
 	
-	List<DepartamentosDTO> listDepartamentos();
+	List<Departamentos> listDepartamentos();
 	
-	DepartamentosDTO departamentosPorCod(int codigo);
+	Departamentos departamentosPorCod(int codigo);
 	
-	DepartamentosDTO saveDepartamentos(DepartamentosDTO departamentos);
+	Departamentos saveDepartamentos(Departamentos departamentos);
 	
-	DepartamentosDTO updateDepartamentos(int codigo, DepartamentosDTO departamentos);
+	Departamentos updateDepartamentos(int codigo, Departamentos departamentos);
 	
 	public void deleteDepartamentos(int codigo);
 }

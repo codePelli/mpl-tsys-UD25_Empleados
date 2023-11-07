@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import ejercicios.dao.IDepartamentosDAO;
-import ejercicios.dto.DepartamentosDTO;
+import ejercicios.dto.Departamentos;
 
 public class IDepartamentosServiceImpl implements IDepartamentosService{
 
@@ -14,25 +14,25 @@ public class IDepartamentosServiceImpl implements IDepartamentosService{
 	private IDepartamentosService iDepService;
 	
 	@Override
-	public List<DepartamentosDTO> listDepartamentos() {
+	public List<Departamentos> listDepartamentos() {
 		// TODO Auto-generated method stub
 		return iDepService.listDepartamentos();
 	}
 
 	@Override
-	public DepartamentosDTO departamentosPorCod(int codigo) {
+	public Departamentos departamentosPorCod(int codigo) {
 		// TODO Auto-generated method stub
 		return iDepService.departamentosPorCod(codigo);
 	}
 
 	@Override
-	public DepartamentosDTO saveDepartamentos(DepartamentosDTO departamentos) {
+	public Departamentos saveDepartamentos(Departamentos departamentos) {
 		// TODO Auto-generated method stub
 		return iDepService.saveDepartamentos(departamentos);
 	}
 
 	@Override
-	public DepartamentosDTO updateDepartamentos(int codigo, DepartamentosDTO departamentos) {
+	public Departamentos updateDepartamentos(int codigo, Departamentos departamentos) {
 		// TODO Auto-generated method stub
 		return iDepService.updateDepartamentos(codigo, departamentos);
 	}
@@ -44,7 +44,7 @@ public class IDepartamentosServiceImpl implements IDepartamentosService{
 	}
 		
 	@GetMapping("/all")
-	public List<DepartamentosDTO> listAllDepartamentos(){
+	public List<Departamentos> listAllDepartamentos(){
 		return listDepartamentos();
 	}
 

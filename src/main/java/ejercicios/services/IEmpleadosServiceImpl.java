@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import ejercicios.dto.EmpleadosDTO;
+import ejercicios.dto.Empleados;
 
 public class IEmpleadosServiceImpl implements IEmpleadosService{
 
@@ -13,25 +13,25 @@ public class IEmpleadosServiceImpl implements IEmpleadosService{
 	private IEmpleadosService iEmplServ;
 	
 	@Override
-	public List<EmpleadosDTO> listEmpleados() {
+	public List<Empleados> listEmpleados() {
 		// TODO Auto-generated method stub
 		return iEmplServ.listEmpleados();
 	}
 
 	@Override
-	public EmpleadosDTO empeladosPorCod(String dni) {
+	public Empleados empeladosPorCod(String dni) {
 		// TODO Auto-generated method stub
 		return iEmplServ.empeladosPorCod(dni);
 	}
 
 	@Override
-	public EmpleadosDTO saveEmpleados(EmpleadosDTO empleados) {
+	public Empleados saveEmpleados(Empleados empleados) {
 		// TODO Auto-generated method stub
 		return iEmplServ.saveEmpleados(empleados);
 	}
 
 	@Override
-	public EmpleadosDTO updateEmpleados(String dni, EmpleadosDTO departamentos) {
+	public Empleados updateEmpleados(String dni, Empleados departamentos) {
 		// TODO Auto-generated method stub
 		return iEmplServ.updateEmpleados(dni, departamentos);
 	}
@@ -43,7 +43,7 @@ public class IEmpleadosServiceImpl implements IEmpleadosService{
 	}
 	
 	@GetMapping("/all")
-	public List<EmpleadosDTO> listAllEmpleados(){
+	public List<Empleados> listAllEmpleados(){
 		return listEmpleados();
 	}
 

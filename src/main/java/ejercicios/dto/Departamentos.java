@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "Departamentos")
-public class DepartamentosDTO {
+public class Departamentos {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="codigo")
@@ -17,7 +17,7 @@ public class DepartamentosDTO {
 	private String nombre;
 	private int presupuesto;
 	
-	public DepartamentosDTO(int codigo, String nombre, int presupuesto) {
+	public Departamentos(int codigo, String nombre, int presupuesto) {
 		super();
 		this.codigo = codigo;
 		this.nombre = nombre;

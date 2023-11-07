@@ -2,17 +2,17 @@ package ejercicios.services;
 
 import java.util.List;
 
-import ejercicios.dto.EmpleadosDTO;
+import ejercicios.dto.Empleados;
 
 public interface IEmpleadosService {
 
-	List<EmpleadosDTO> listEmpleados();
+	List<Empleados> listEmpleados();
 	
-	EmpleadosDTO empeladosPorCod(String dni);
+	Empleados empeladosPorCod(String dni);
 	
-	EmpleadosDTO saveEmpleados(EmpleadosDTO empleados);
+	Empleados saveEmpleados(Empleados empleados);
 	
-	EmpleadosDTO updateEmpleados(String dni, EmpleadosDTO departamentos);
+	Empleados updateEmpleados(String dni, Empleados departamentos);
 	
 	public void deleteEmpleados(String dni);
 }

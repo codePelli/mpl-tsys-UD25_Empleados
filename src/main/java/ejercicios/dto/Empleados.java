@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "Empleados")
-public class EmpleadosDTO {
+public class Empleados {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="dni")
@@ -19,7 +19,7 @@ public class EmpleadosDTO {
 	private String nombre;
 	private String apellidos;
 	
-	public EmpleadosDTO(String dni, String nombre, String apellidos, DepartamentosDTO departamentos) {
+	public Empleados(String dni, String nombre, String apellidos, Departamentos departamentos) {
 		super();
 		this.dni = dni;
 		this.nombre = nombre;
@@ -29,5 +29,5 @@ public class EmpleadosDTO {
 
 	@ManyToOne
 	@JoinColumn(name = "departamento")
-	private DepartamentosDTO departamentos;
+	private Departamentos departamentos;
 }

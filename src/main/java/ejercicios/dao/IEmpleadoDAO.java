@@ -3,8 +3,8 @@ package ejercicios.dao;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import ejercicios.dto.EmpleadosDTO;
+import ejercicios.dto.Empleados;
 
 @Repository
-public interface IEmpleadoDAO extends JpaRepository<EmpleadosDTO, String>{
+public interface IEmpleadoDAO extends JpaRepository<Empleados, String>{
 }
