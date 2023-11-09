@@ -2,10 +2,7 @@ package ejercicios.services;
 
 import java.util.List;
 
-<<<<<<< HEAD
 import ejercicios.dto.Empleados;
-=======
-import ejercicios.Empleados;
 
 public interface IEmpleadosService {
 

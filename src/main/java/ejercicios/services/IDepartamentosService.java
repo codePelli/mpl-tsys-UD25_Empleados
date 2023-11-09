@@ -2,11 +2,8 @@ package ejercicios.services;
 
 import java.util.List;
 
-<<<<<<< HEAD
+
 import ejercicios.dto.Departamentos;
-=======
-import ejercicios.Departamentos;
-import ejercicios.dto.DepartamentosDTO;
 
 public interface IDepartamentosService {
 	

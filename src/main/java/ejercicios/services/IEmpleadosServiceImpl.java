@@ -5,10 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 
-<<<<<<< HEAD
 import ejercicios.dto.Empleados;
-=======
-import ejercicios.Empleados;
 
 public class IEmpleadosServiceImpl implements IEmpleadosService{
 
