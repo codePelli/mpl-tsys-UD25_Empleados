@@ -1,24 +1,23 @@
-drop database if exists ud14_ejercicio04;
-create database if not exists ud14_ejercicio04;
-use ud14_ejercicio04;
+DROP table IF EXISTS departamentos;
+DROP table IF EXISTS empleados;
 
-CREATE TABLE IF NOT EXISTS Departamentos (
+CREATE TABLE Departamentos (
     codigo INT PRIMARY KEY,
-    nombre NVARCHAR(100),
+    nombre VARCHAR(100),
     presupuesto INT
 );
 
-CREATE TABLE IF NOT EXISTS Empleados (
-    DNI VARCHAR(8) PRIMARY KEY,
-    nombre NVARCHAR(100),
-    apellidos NVARCHAR(255),
+CREATE TABLE Empleados (
+    dni VARCHAR(8) PRIMARY KEY,
+    nombre VARCHAR(100),
+    apellidos VARCHAR(100),
     departamento INT,
     FOREIGN KEY (departamento)
         REFERENCES Departamentos (codigo)
         ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-INSERT INTO Departamentos (codigo, nombre, presupuesto) VALUES (1, 'Departamento de Ventas', 50000);
-INSERT INTO Departamentos (codigo, nombre, presupuesto) VALUES (2, 'Departamento de IT', 75000);
-INSERT INTO Empleados (DNI, nombre, apellidos, departamento) VALUES ('12345678A', 'Juan', 'Perez', 1);
-INSERT INTO Empleados (DNI, nombre, apellidos, departamento) VALUES ('98765432B', 'Maria', 'Gonzalez', 2);
+INSERT INTO Departamentos (codigo, nombre, presupuesto) VALUES (1, 'Departamento', 50000);
+INSERT INTO Departamentos (codigo, nombre, presupuesto) VALUES (2, 'Departamento', 75000);
+INSERT INTO Empleados (DNI, nombre, apellidos, departamento) VALUES ('12345678', 'Juan', 'Perez', 1);
+INSERT INTO Empleados (DNI, nombre, apellidos, departamento) VALUES ('98765432', 'Maria', 'Gonzalez', 2);

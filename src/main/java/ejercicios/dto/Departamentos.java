@@ -17,6 +17,10 @@ public class Departamentos {
 	private String nombre;
 	private int presupuesto;
 	
+	public Departamentos() {
+		super();
+	}
+
 	public Departamentos(int codigo, String nombre, int presupuesto) {
 		super();
 		this.codigo = codigo;

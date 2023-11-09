@@ -8,7 +8,7 @@ public interface IEmpleadosService {
 
 	List<Empleados> listEmpleados();
 	
-	Empleados empeladosPorCod(String dni);
+	Empleados empleadosPorCod(String dni);
 	
 	Empleados saveEmpleados(Empleados empleados);
 	

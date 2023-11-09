@@ -19,9 +19,9 @@ public class IEmpleadosServiceImpl implements IEmpleadosService{
 	}
 
 	@Override
-	public Empleados empeladosPorCod(String dni) {
+	public Empleados empleadosPorCod(String dni) {
 		// TODO Auto-generated method stub
-		return iEmplServ.empeladosPorCod(dni);
+		return iEmplServ.empleadosPorCod(dni);
 	}
 
 	@Override
