@@ -14,15 +14,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 import ejercicios.dto.Empleados;
 import ejercicios.services.IEmpleadosService;
+import ejercicios.services.IEmpleadosServiceImpl;
 
 @RestController
 @RequestMapping("/empleados")
 public class EmpleadosController {
 
-	    IEmpleadosService empleadosService;
+		@Autowired
+	    IEmpleadosServiceImpl empleadosService;
 
-	    @GetMapping("/all")
+	    @GetMapping("/list")
 	    public List<Empleados> listarEmpleados() {
+	    	
 	        return empleadosService.listEmpleados();
 	    }
 
@@ -31,29 +34,29 @@ public class EmpleadosController {
 	        return empleadosService.saveEmpleados(empleado);
 	    }
 
-	    @GetMapping("/{DNI}")
-	    public Empleados empleadoXID(@PathVariable(name = "DNI") String DNI) {
+	    @GetMapping("/{dni}")
+	    public Empleados empleadoXID(@PathVariable(name = "dni") String dni) {
 	    	
-	        Empleados empleadoPorId = empleadosService.empleadosPorCod(DNI);
+	        Empleados empleadoPorId = empleadosService.empleadosPorCod(dni);
 	        System.out.println("Empleado XID: " + empleadoPorId);
 	        return empleadoPorId;
 	    }
 
-	    @PutMapping("/{DNI}")
-	    public Empleados actualizarEmpleado(@PathVariable(name = "DNI") String DNI, @RequestBody Empleados empleado) {
+	    @PutMapping("/{dni}")
+	    public Empleados actualizarEmpleado(@PathVariable(name = "dni") String dni, @RequestBody Empleados empleado) {
 	    	
-	        Empleados empleadoSeleccionado = empleadosService.empleadosPorCod(DNI);
+	        Empleados empleadoSeleccionado = empleadosService.empleadosPorCod(dni);
 	        empleadoSeleccionado.setNombre(empleado.getNombre());
 	        empleadoSeleccionado.setApellidos(empleado.getApellidos());
 	        empleadoSeleccionado.setDepartamentos(empleado.getDepartamentos());
 	        
-	        return empleadosService.updateEmpleados(DNI, empleadoSeleccionado);
+	        return empleadosService.updateEmpleados(empleadoSeleccionado);
 	    }
 
-	    @DeleteMapping("/{DNI}")
-	    public void eliminarEmpleado(@PathVariable(name = "DNI") String DNI) {
+	    @DeleteMapping("/{dni}")
+	    public void eliminarEmpleado(@PathVariable(name = "dni") String dni) {
 	    	
-	        empleadosService.deleteEmpleados(DNI);
+	        empleadosService.deleteEmpleados(dni);
 	        System.out.println("Empleado eliminado");
 	    }
 	}

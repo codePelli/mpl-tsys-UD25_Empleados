@@ -13,7 +13,6 @@ import jakarta.persistence.Table;
 @Table(name = "Empleados")
 public class Empleados {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="dni")
 	private String dni;
 	private String nombre;
@@ -27,8 +26,12 @@ public class Empleados {
 		this.departamentos = departamentos;
 	}
 
+	public Empleados() {
+		super();
+	}
+
 	@ManyToOne
-	@JoinColumn(name = "Departamentos")
+	@JoinColumn(name = "departamento")
 	private Departamentos departamentos;
 	
 	public String getDni() {

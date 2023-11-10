@@ -13,7 +13,7 @@ public interface IDepartamentosService {
 	
 	Departamentos saveDepartamentos(Departamentos departamentos);
 	
-	Departamentos updateDepartamentos(int codigo, Departamentos departamentos);
+	Departamentos updateDepartamentos(Departamentos departamentos);
 	
 	public void deleteDepartamentos(int codigo);
 }

@@ -3,48 +3,46 @@ package ejercicios.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import ejercicios.dao.IEmpleadoDAO;
 import ejercicios.dto.Empleados;
 
+@Service
 public class IEmpleadosServiceImpl implements IEmpleadosService{
 
 	@Autowired
-	private IEmpleadosService iEmplServ;
+	private IEmpleadoDAO iEmplServ;
 	
 	@Override
 	public List<Empleados> listEmpleados() {
 		// TODO Auto-generated method stub
-		return iEmplServ.listEmpleados();
+		return iEmplServ.findAll();
 	}
 
 	@Override
 	public Empleados empleadosPorCod(String dni) {
 		// TODO Auto-generated method stub
-		return iEmplServ.empleadosPorCod(dni);
+		return iEmplServ.findById(dni).get();
 	}
 
 	@Override
 	public Empleados saveEmpleados(Empleados empleados) {
 		// TODO Auto-generated method stub
-		return iEmplServ.saveEmpleados(empleados);
+		return iEmplServ.save(empleados);
 	}
 
 	@Override
-	public Empleados updateEmpleados(String dni, Empleados departamentos) {
+	public Empleados updateEmpleados(Empleados empleados) {
 		// TODO Auto-generated method stub
-		return iEmplServ.updateEmpleados(dni, departamentos);
+		return iEmplServ.save(empleados);
 	}
 
 	@Override
 	public void deleteEmpleados(String dni) {
 		// TODO Auto-generated method stub
-		iEmplServ.deleteEmpleados(dni);
-	}
-	
-	@GetMapping("/all")
-	public List<Empleados> listAllEmpleados(){
-		return listEmpleados();
+		iEmplServ.deleteById(dni);
 	}
 
 }

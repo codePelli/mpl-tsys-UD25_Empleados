@@ -12,7 +12,7 @@ public interface IEmpleadosService {
 	
 	Empleados saveEmpleados(Empleados empleados);
 	
-	Empleados updateEmpleados(String dni, Empleados departamentos);
+	Empleados updateEmpleados(Empleados departamentos);
 	
 	public void deleteEmpleados(String dni);
 }

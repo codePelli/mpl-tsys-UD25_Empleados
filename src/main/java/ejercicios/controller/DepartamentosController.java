@@ -19,10 +19,11 @@ import ejercicios.services.IDepartamentosServiceImpl;
 @RestController
 @RequestMapping("/departamentos")
 public class DepartamentosController {
+	
+	@Autowired
+    IDepartamentosServiceImpl departamentosService;
 
-    IDepartamentosService departamentosService;
-
-    @GetMapping("/all")
+    @GetMapping("/list")
     public List<Departamentos> listarDepartamentos() {
     	
         return departamentosService.listDepartamentos();
@@ -48,7 +49,7 @@ public class DepartamentosController {
         Departamentos departamentoSeleccionado = departamentosService.departamentosPorCod(codigo);
         departamentoSeleccionado.setNombre(departamento.getNombre());
         departamentoSeleccionado.setPresupuesto(departamento.getPresupuesto());
-        return departamentosService.updateDepartamentos(codigo, departamentoSeleccionado);
+        return departamentosService.updateDepartamentos(departamentoSeleccionado);
     }
 
     @DeleteMapping("/{codigo}")

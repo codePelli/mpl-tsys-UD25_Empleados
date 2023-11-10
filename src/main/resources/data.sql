@@ -1,5 +1,5 @@
-DROP table IF EXISTS departamentos;
 DROP table IF EXISTS empleados;
+DROP table IF EXISTS departamentos;
 
 CREATE TABLE Departamentos (
     codigo INT PRIMARY KEY,
